@@ -1,5 +1,5 @@
 from math import pi
-lst = list(map(int, input().split()))
+lst = list(map(float, input().split()))
 #s = float
 #pole = float
 if len(lst) == 1:
