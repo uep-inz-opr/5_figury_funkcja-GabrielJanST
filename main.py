@@ -1,26 +1,36 @@
 from math import pi
+lst = list(map(int, input().split()))
 #a, b, c = [int(a) for a in input().split()]
 #a, b, c = input()
 s = float
 pole = float
 inputs = []
-for i in range(3):
-    inputs.append(input())
-a = inputs[0]
-b = inputs[1]
-c = inputs[2]
-if b == 0 and c == 0:
+#for i in range(3):
+#    inputs.append(input())
+#a = float(lst[0])
+#b = float(lst[1])
+#c = float(lst[2])
+#if b == 0 and c == 0:
+if len(lst) == 1:
+    a = float(lst[0])
     def policz_kolo(a):
         return pi * a * a
     pole = '%0.2f' %policz_kolo(a)
     print(pole)
-elif c == 0:
+#elif c == 0:
+elif len(lst) == 2:
+    a = float(lst[0])
+    b = float(lst[1])
     def policz_prostokata(a,b):
         return a * b
     pole = '%0.2f' %policz_prostokata(a,b)
     print(pole)
-elif a != 0 and b != 0 and c != 0:
-    s = (a + b + c) / 2
+#elif a != 0 and b != 0 and c != 0:
+elif len(lst) == 3:
+    a = float(lst[0])
+    b = float(lst[1])
+    c = float(lst[2])
+    s = ((a + b + c)/2)
     def policz_trojkata(a,b,c):
         #if a > b and a > c:
          #   return (1/2)*b*c
